@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-geofence",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "geofence library for react native compatible with expo",
   "main": "index.js",
   "scripts": {

@@ -38,6 +38,3 @@ class MyComponent extends Component
     }
 }
 ```
-
-
-
