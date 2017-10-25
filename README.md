@@ -34,7 +34,11 @@ class MyComponent extends Component
         // startPoint - center of perimeter
         // points - array of points
         // maxDistanceInKM - max point distance from startPoint in KM's
-        Geofence.filterByProximity(startPoint, points, maxDistanceInKM);
+        // result - array of points inside the max distance
+        var result = Geofence.filterByProximity(startPoint, points, maxDistanceInKM);
+
+        // You can access distance of this object in distanceInKM property
+        var distance = result[0].distanceInKM;
     }
 }
 ```

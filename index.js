@@ -38,6 +38,7 @@ class Geofence extends Component {
             
             if(pointDistance <= maxDistance)
             {
+                points[i].distanceInKM = pointDistance;
                 result.push(points[i]);
             }
         }
