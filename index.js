@@ -1,8 +1,4 @@
-//import liraries
-import React, { Component } from 'react';
-
-// create a component
-class Geofence extends Component {
+class Geofence {
 
     static Log = false;
 
@@ -26,6 +22,7 @@ class Geofence extends Component {
         var result = [];
         var pointDistance = 0;
         var rlog = null;
+
         for (var i = 0; i < points.length; i++) {
             pointDistance = Geofence.distanceInKM(centerPoint, points[i]);
             if(Geofence.Log)
@@ -38,8 +35,13 @@ class Geofence extends Component {
             
             if(pointDistance <= maxDistance)
             {
-                points[i].distanceInKM = pointDistance;
-                result.push(points[i]);
+                let clonePoint = {}
+                clonePoint.distanceInKM = pointDistance;
+                clonePoint.key = points[i].key;
+                clonePoint.latitude = points[i].latitude;
+                clonePoint.longitude = points[i].longitude;
+                clonePoint.title = points[i].title;
+                result.push(clonePoint);
             }
         }
 
